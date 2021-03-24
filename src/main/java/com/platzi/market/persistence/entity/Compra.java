@@ -33,12 +33,12 @@ public class Compra {
         this.cliente = cliente;
     }
 
-    public List<ComprasProducto> getProducto() {
-        return producto;
+    public List<ComprasProducto> getProductos() {
+        return productos;
     }
 
-    public void setProducto(List<ComprasProducto> producto) {
-        this.producto = producto;
+    public void setProductos(List<ComprasProducto> producto) {
+        this.productos = producto;
     }
 
     @ManyToOne
@@ -46,7 +46,7 @@ public class Compra {
     private Cliente cliente;
 
     @OneToMany(mappedBy = "compra", cascade = {CascadeType.ALL})
-    private List<ComprasProducto> producto;
+    private List<ComprasProducto> productos;
 
     public Integer getIdCompra() {
         return idCompra;
